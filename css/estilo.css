@@ -1,0 +1,420 @@
+:root {
+  --azul: #004dd2;
+  --line: #c7baee;
+  --blanco: #ffffff;
+  --negro: #000000;
+  --gris: #555555;
+  --fondo: #eff2f7;
+}
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: helvetica;
+  font-size: 16px;
+  line-height: 24px;
+  color: #333;
+}
+.ancho {
+  max-width: 1200px;
+  margin: auto;
+  /* border: 1px red solid; */
+}
+.contenedor_arriba {
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  align-items: center;
+  margin-bottom: 20px;
+}
+.contenedor_arriba p {
+  color: var(--azul);
+  font-size: 13px;
+  font-weight: bold;
+}
+.titulo2 {
+  padding: 10px;
+}
+.contenedor_arriba hr {
+  border: 0;
+  height: 3px;
+  background-color: var(--line);
+  width: 70px;
+}
+
+/*Código contenedor galeria*/
+.contenedor_galeria {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+.caja_galeria {
+  border: 1px orange solid;
+  width: 380px;
+  height: 440px;
+  overflow: hidden;
+  margin-bottom: 20px;
+  filter: grayscale(0%);
+  position: relative;
+  cursor: pointer;
+}
+.caja_galeria img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Código efecto de caja galeria*/
+.caja_galeria:hover {
+  filter: grayscale(100%);
+}
+.caja_galeria:hover .texto_fondo{
+  top: 50%;
+}
+
+
+.texto_fondo{
+  background-color: grey;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 100%;
+  left: 15%;
+  width: 70%;
+  height: 40%;
+  transition: all 0.5s;
+  border-radius: 5px;
+}
+.texto_fondo i{
+  border-radius: 5px;
+  padding: 8px;
+  background-color: white;
+  color: gray;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*Código de contenedor team*/
+.contenedor_arriba2{
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  align-items: center;
+  margin-bottom: 20px;
+}
+.contenedor_arriba2 p {
+  color: var(--azul);
+  font-size: 13px;
+  font-weight: bold;
+}
+.contenedor_arriba2 hr {
+  border: 0;
+  height: 3px;
+  background-color: var(--line);
+  width: 70px;
+}
+
+
+#fondo_gris {
+  background-color: var(--fondo);
+}
+.contenedor_team {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+}
+.caja_team{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--blanco);
+  border-radius: 5px;
+  overflow: hidden;
+  position: relative;
+}
+.caja_team figure{
+  max-width: 280px;
+}
+.caja_team img{
+  width: 100%;
+  object-fit: cover;
+}
+/*Caja nombre*/
+.caja_nombre{
+  text-align: center;
+  padding: 10px;
+}
+.caja_nombre p{
+  color:var(--azul);
+}
+
+.caja_team:hover .caja_ico{
+  top: 0%;
+  opacity: 1;
+}
+.caja_ico{
+  background-color: rgba(0, 0, 255, 0.558);
+  color: white;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content:center;
+  align-items: flex-end;
+  opacity: 0;
+  top: 0%;
+  left: 0%;
+  width: 100%;
+  height: 82%;
+  transition: all 0.5s;
+
+}
+.caja_ico2{
+  background-color: white;
+  max-width: 30px;
+}
+.caja_ico2 i{
+font-size: 15px;
+margin: 2px;
+padding: 5px;
+color: blue;
+background-color: white;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Código planes */
+.contenedor_planes{
+  display: flex;
+  flex-direction: row;
+  justify-content:space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 30px;
+}
+.caja_info{
+  display:flex ;
+  flex-direction: column;
+  justify-content:center;
+  align-items: center;
+  max-width: 340px;
+  border: 1px grey solid;
+  border-radius: 5px;
+  transition: all 0.5s;
+}
+
+.caja_info h2{
+  color: blue;
+  text-align: center;
+  margin-top: 50px;
+  margin-bottom: 20px;
+}
+
+.caja_info:hover{
+   border: 2px blue solid;
+   box-shadow: 0px 0px 10px #333;
+}
+.caja_info:hover .texto_info{
+  border: 1px blue solid;
+}
+.caja_info:hover .btn_plan{
+  background-color: blue;
+  color: white;
+}
+.texto_info{
+  font-size: 20px;
+  text-align: center;
+      border: 1px grey solid;
+      border-radius: 5px;
+      padding: 35px;
+      margin-left: 40px;
+      margin-right: 40px;
+      line-height: 35px;
+}
+
+.signo{
+  font-size: 20px;
+}
+.txto_precio{
+  font-size: 40px;
+  color: blue;
+  font-weight: bolder;
+  margin-top: 20px;
+}
+
+.txto_precio span{
+  font-size: 20px;
+}
+
+.btn_plan {
+  font-size: 15px;
+  text-decoration: none;
+  border: 1px blue solid;
+  width: 140px;
+ text-align: center;
+ padding: 5px;
+ border-radius: 4px;
+ margin: 20px;
+}
+
+
+
+
+/*Contenedor Blog*/
+
+.contenedor_blog{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 50px 0px 50px 0px;
+}
+
+.caja_blog{
+  display:flex ;
+  flex-direction: column;
+  justify-content:center;
+  align-items: center;
+  max-width: 350px;
+  border: 1px grey solid;
+  border-radius: 5px;
+}
+.caja_blog figure {
+  overflow: hidden;
+  cursor: pointer;
+}
+.caja_blog:hover{
+  transition: all 0.5s;
+  box-shadow: 0px 0px 10px #333;
+}
+.caja_blog figure img{
+  max-width: 100%;
+  transform: scale(1);
+  transition: all 0.5s;
+}
+
+.caja_blog figure:hover img{
+  transform: scale(1.5);
+}
+.juanuary {
+     width: 300px;
+    padding-top: 15px;
+  }
+.juanuary p{
+  text-align: left;
+font-size: 20px;
+}
+
+.caja_blog h2{
+padding: 10px 25px 10px 25px;
+}
+
+.text_blog {
+  padding:  0px 25px 10px 25px;
+}
+
+.info_More{
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start;
+  width: 300px;
+  margin-bottom: 15px;
+  cursor: pointer;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Código contenedor_planes */
+.contenedor_planes{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content:space-between;
+  align-items: center;
+}
+.caja_plan{
+  width: 300px;
+ height: 300px;
+ display: flex;
+ flex-direction: column;
+  justify-content: center;
+  align-items: center;;
+  /* overflow: hidden; */
+  background-color: var(--blanco);
+  border-radius: 5px;
+  border: 1px blue solid;
+}
+.caja_dias{
+  border: 1px #ccc solid;
+  padding: 10px;
+}
+.caja_precio{
+  color: var(--azul);
+}
